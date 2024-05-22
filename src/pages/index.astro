@@ -2,11 +2,12 @@
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import WhatsApp from '../icons/WhatsApp.astro';
+import CardImage from '../layouts/CardImage.astro';
 ---
 
 <Layout title="Detalles Magicos">
-	<main class="mx-10 my-20">
-		<div class="bg-[#7879F1] rounded-md p-7">
+	<main class="mx-10">
+		<div class="bg-[#7879F1] rounded-md p-7 my-4">
 			<div class="flex gap-x-3">
 				<div>
 					<h1 class="text-black text-5xl font-extrabold">Encuentra los <span class="text-[#ef91fc]">mejores regalos</span> a los mejores precios</h1>
@@ -20,18 +21,38 @@ import WhatsApp from '../icons/WhatsApp.astro';
 							<p>ofertas</p>
 						</div>
 					</div>
-					<div class="rounded-lg bg-white p-3 gap-x-2 flex flex-row">
+					<a class="rounded-lg bg-white p-3 gap-x-2 flex flex-row" href="https://google.com" target="_blank">
 						<div class="bg-[#9dfce4] rounded-lg p-1"><WhatsApp class="size-6"/></div>
 						<p class="text-gray-400">Que es lo que buscas?</p>
-					</div>
+					</a>
 				</div>
 				<div>
-					<img width="500" height="500" src="/src/assets/gift-3.png">
+					<img class="size-60" src="/src/assets/gift-3.png">
 				</div>
 			</div>
 			
 		</div>
-		
+		<div class="flex flex-row my-4">
+			<div class="flex flex-col w-[15%]">
+				<h1 class="font-bold text-2xl">Mas vendidos</h1>
+				<p class="text-gray">Estos son los regalos mas pedidos por los clientes</p>
+				<button class="bg-[#9dfce4] rounded-lg p-2 mr-20 my-3">
+					Ver mas
+				</button>
+			</div>
+			<div class="flex flex-row gap-5">
+				<CardImage image="/src/assets/gift-3.png" name="Corazon encantado" price={40} priceDiscount={30}/>
+				<CardImage image="/src/assets/gift-3.png" name="Corazon encantado" price={40} priceDiscount={30}/>
+				<CardImage image="/src/assets/gift-3.png" name="Corazon encantado" price={40} priceDiscount={30}/>
+				<CardImage image="/src/assets/gift-3.png" name="Corazon encantado" price={40} priceDiscount={30}/>
+			</div>
+		</div>
+		<div class="flex flex-col my-10">
+			<div class="text-center">
+				<h1 class="font-bold text-2xl">Acerca de nosotros</h1>
+				<p>Compra ahora y paga despues</p>
+			</div>
+		</div>
 	</main>
 </Layout>
 
