@@ -1,37 +1,14 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import WhatsApp from '../icons/WhatsApp.astro';
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import WhatsApp from "../icons/WhatsApp.astro";
+import Principal from "../components/Principal.astro";
+import Popular from "../components/Popular.astro";
 ---
 
 <Layout title="Detalles Magicos">
-	<main class="mx-10 my-20">
-		<div class="bg-[#7879F1] rounded-md p-7">
-			<div class="flex gap-x-3">
-				<div>
-					<h1 class="text-black text-5xl font-extrabold">Encuentra los <span class="text-[#ef91fc]">mejores regalos</span> a los mejores precios</h1>
-					<div class="my-10 flex gap-x-2">
-						<div class="flex-column mr-4">
-							<p class="text-xl font-semibold">30+</p>
-							<p>modelos</p>
-						</div>
-						<div class="border-l-black border-l-2 flex-column px-5">
-							<p class="text-xl font-semibold">20+</p>
-							<p>ofertas</p>
-						</div>
-					</div>
-					<div class="rounded-lg bg-white p-3 gap-x-2 flex flex-row">
-						<div class="bg-[#9dfce4] rounded-lg p-1"><WhatsApp class="size-6"/></div>
-						<p class="text-gray-400">Que es lo que buscas?</p>
-					</div>
-				</div>
-				<div>
-					<img width="500" height="500" src="/src/assets/gift-3.png">
-				</div>
-			</div>
-			
-		</div>
-		
-	</main>
+  <main class="mx-44 my-10">
+    <Principal/>
+		<Popular/>
+  </main>
 </Layout>
-

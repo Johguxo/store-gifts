@@ -1,15 +1,49 @@
 ---
+import WhatsApp from '../icons/WhatsApp.astro';
+
 interface Props {
-	title: string;
-	body: string;
-	href: string;
+	name: string;
+	description: string;
+	href?: string;
+	image: string;
+	price: string,
 }
 
-const { href, title, body } = Astro.props;
+const { href, name, description, image, price } = Astro.props;
 ---
 
-<li>
-	<h1 class="text-3xl font-bold underline text-red-400">
-		Hello world!
-	</h1>
-</li>
+<div class="w-[350px] h-[380px] bg-[#ffffff7a] rounded-[20px] flex items-center justify-center mx-4 shadow-2xl transition-all duration-300 hover:scale-105">
+	<div class="w-[95%] h-[95%] bg-[#ffffff] rounded-[20px] flex  flex-col items-center  justify-center">
+		<div class="w-[90%] flex items-center justify-center relative">
+			<img
+				class="h-[220px] w-full object-cover rounded-xl"
+				src={image}
+				alt={name}
+				width={300}
+				height={300}
+			/>
+		</div>
+		<div class="w-[90%] flex items-center justify-between mt-4">
+			<h1 class="text-xl font-extrabold text-secondary">
+				{name}
+			</h1>
+			<h1 class="text-xl">
+				{price}
+			</h1>
+		</div>
+			<div class="w-[90%] flex items-center justify-between m-4">
+					<div 
+							class='flex justify-center items-center'
+					>
+							<h1 class="text-lg text-slate border-2 px-4 rounded-lg border-tercary text-tercary  font-bold">
+									Flores amarillas
+							</h1>
+					</div>
+					<div 
+					class='w-[30px] h-[30px] bg-primary rounded-full flex items-center justify-center'
+					>
+						<WhatsApp class='text-xl text-white'/>
+					</div>
+			</div>
+	</div>
+</div>

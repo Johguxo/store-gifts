@@ -1,0 +1,36 @@
+---
+import Card from "./Card.astro";
+
+const cards = [
+    {
+      name: "Globo aerostatico",
+      description: "",
+      price: "S/25.00",
+      image: "/src/assets/catalog/photo_1.jpeg",
+    },
+    {
+      name: "Ramo envasado",
+      description: "",
+      price: "S/30.00",
+      image: "/src/assets/catalog/photo2_3.jpeg",
+    },
+    {
+      name: "Feliz RM",
+      description: "",
+      price: "S/20.00",
+      image: "/src/assets/catalog/photo3_1.jpeg",
+    },
+  ];
+---
+
+<section class="w-full h-[700px] relative  flex items-start justify-center mt-16">
+  <div class="w-full  h-[300px] items-center bg-cuaternary justify-center">
+    <h1 class="text-black text-3xl font-bold">Populares</h1>
+  </div>
+  
+  <div class="w-5/6 flex h-[350px] z-20 absolute bottom-[150px] items-center bg-cyan-600 rounded-[80px] justify-center">
+    <div  class="w-[92%] flex h-[350px] z-10 absolute bottom-[90px] items-center justify-evenly">
+      {cards.map(info => <Card {...info}/>)}
+    </div>
+  </div>
+</section>
