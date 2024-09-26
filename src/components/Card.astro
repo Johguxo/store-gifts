@@ -1,6 +1,7 @@
 ---
 import WhatsApp from '../icons/WhatsApp.astro';
 import { Image } from 'astro:assets';
+import imagedefault from '../assets/catalog/photo3_1.jpeg';
 
 interface Props {
 	name: string;
@@ -18,7 +19,7 @@ const { href, name, description, image, price } = Astro.props;
 		<div class="w-[90%] flex items-center justify-center relative">
 			<Image
 				class="h-[220px] w-full object-cover rounded-xl"
-				src={image}
+				src={imagedefault}
 				alt={name}
 				width={300}
 				height={300}

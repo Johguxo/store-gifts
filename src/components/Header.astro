@@ -1,14 +1,16 @@
 ---
+import { Image } from "astro:assets";
+import myLogoImage from "../assets/logo.jpg"
 
 
 ---
 
 <header class="w-full h-full flex items-center bg-[#f5daf6] p-3">
   <div class=" w-1/2 h-full flex justify-center items-center">
-    <img 
+    <Image 
   class="rounded-full w-12 h-12"
-  src="/src/assets/logo.jpg" 
-  alt="johguxo-img" />
+  src={myLogoImage}
+  alt="logo-img" />
   </div>
   <ul class="w-1/2 h-full  justify-center items-center flex">
     <li class="mx-4">
